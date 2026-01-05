@@ -22,15 +22,13 @@ Run using plain `docker run` (example)
 docker network create devops-net
 ```
 
-2) Start Postgres with persistent volume and environment variables:
+2) Start Postgres with persistent volume and environment variables (use an env file):
 
 ```bash
 docker run -d \
   --name pg-db \
   --network devops-net \
-  -e POSTGRES_USER=appuser \
-  -e POSTGRES_PASSWORD=apppassword \
-  -e POSTGRES_DB=appdb \
+  --env-file postgres.env \
   -v pgdata:/var/lib/postgresql/data \
   postgres:14-alpine
 ```
@@ -44,11 +42,7 @@ docker run -d \
   --name app-backend \
   --network devops-net \
   -p 3000:3000 \
-  -e DB_HOST=pg-db \
-  -e DB_PORT=5432 \
-  -e DB_USER=appuser \
-  -e DB_PASS=apppassword \
-  -e DB_NAME=appdb \
+  --env-file backend.env \
   app-backend:latest
 ```
 
