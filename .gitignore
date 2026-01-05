@@ -1,2 +1,7 @@
 .env
 node_modules
+backend.env
+postgres.env
+.env.example
+.dockerignore
+.gitignore
