@@ -1,0 +1,10 @@
+app: 
+name: nginx
+
+image:
+  repository: nginx
+  tag: latest
+
+service:
+  type: NodePort
+  port: 80
