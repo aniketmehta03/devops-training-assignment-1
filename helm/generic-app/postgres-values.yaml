@@ -1,0 +1,9 @@
+auth:
+  username: devops
+  password: devops123
+  database: appdb
+
+primary:
+  persistence:
+    enabled: true
+    size: 1Gi
