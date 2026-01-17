@@ -12,7 +12,7 @@ It allows users to manage their tasks by adding, editing, and deleting items fro
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### Prerequisite
 
 
 
