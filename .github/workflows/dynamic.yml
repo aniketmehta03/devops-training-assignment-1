@@ -32,7 +32,7 @@ jobs:
 
       - name: Update Helm Value.yaml
         run: |
-          sed -i "s/tag:.*/tag: ${{ github.sha }}/" helm/generic-app/value.yaml
+          sed -i "s/tag:.*/tag: ${{ github.sha }}/" helm/generic-app/values.yaml
 
       - name: Commit helm update
         run: |
