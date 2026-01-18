@@ -1,0 +1,22 @@
+app:
+  name: node
+
+image:
+  repository: aniket036/backend-app
+  tag: d102aa3eb788501e903f62b076911b90163c23fe
+
+service:
+  type: NodePort
+  port: 3000
+
+env:
+  - name: DB_HOST
+    value: postgres-postgresql
+  - name: DB_PORT
+    value: "5432"
+  - name: DB_USER
+    value: devops
+  - name: DB_PASSWORD
+    value: devops123
+  - name: DB_DATABASE
+    value: appdb
