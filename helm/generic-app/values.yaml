@@ -3,7 +3,7 @@ app:
 
 image:
   repository: aniket036/backend-app
-  tag: d3f01f1
+  tag: d102aa3eb788501e903f62b076911b90163c23fe
 
 service:
   type: NodePort
